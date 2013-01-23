@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#pages#login.xhtml" PATH="/pages/login.xhtml"
+  SHAPE="48,161,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#pages#login.xhtml:0" NAME="item"
+   PATH="/pages/login.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="success::#pages#search.xhtml" NAME="output"
+    PATH="/pages/search.xhtml" TARGET="rules:#pages#search.xhtml"
+    TITLE="success" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="error::#pages#login.xhtml" NAME="output1"
+    PATH="/pages/login.xhtml" TARGET="rules:#pages#login.xhtml"
+    TITLE="error" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="reset::#pages#login.xhtml" NAME="output2"
+    PATH="/pages/login.xhtml" TARGET="rules:#pages#login.xhtml"
+    TITLE="reset" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#pages#search.xhtml"
+  PATH="/pages/search.xhtml" SHAPE="288,145,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:view contentType="text/html">
+
+	<h:head>
+		<f:facet name="first">
+			<meta content='text/html; charset=UTF-8' http-equiv="Content-Type" />
+			<title>Caveat Emptor</title>
+		</f:facet>
+
+		<link type="text/css" rel="stylesheet" href="#{request.contextPath}/css/default.css" />
+	</h:head>
+
+	<ui:insert name="head"></ui:insert>
+	
+	<h:body>
+
+		<p:layout fullPage="false" style="align:'center';width:800;height:600">
+
+			<p:layoutUnit position="north">
+				<h:graphicImage value="/images/books.jpg" height="70" width="50"></h:graphicImage>
+			</p:layoutUnit>
+
+			<p:layoutUnit position="center">
+				<ui:insert name="portal_content"></ui:insert>
+			</p:layoutUnit>
+			
+			<p:layoutUnit position="south">
+				<p> &#169; 2013 Anindya Saha </p>
+			</p:layoutUnit>
+			
+		</p:layout>
+
+	</h:body>
+
+</f:view>
+</html>

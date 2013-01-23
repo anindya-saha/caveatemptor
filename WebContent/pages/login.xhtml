@@ -1,0 +1,56 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<link href="#{request.contextPath}/css/default.css" rel="stylesheet" type="text/css" />
+	<title>Caveat Emptor</title>
+</h:head>
+
+<h:body >
+	<center>
+		<p:panel header="Login to Caveat Emptor" style="width:30%;">
+			<h:form>
+				<table>
+					<tr>
+						<td><img src="#{request.contextPath}/images/books.jpg" height="175"/></td>
+						<td>
+							<table>
+								<tr>
+									<td><h:outputLabel for="username" value="Username : " /></td>
+									<td><p:inputText id="username" value="#{WelcomeManagedBean.username}">
+											<f:validateLength minimum="3" />
+											<p:ajax event="blur" update="usernameMsg" />
+										</p:inputText></td>
+									<td><p:message id="usernameMsg" for="username" display="icon" /></td>
+								</tr>
+								<tr>
+									<td><h:outputLabel for="password" value="Password : " /></td>
+									<td><p:password id="password" value="#{WelcomeManagedBean.password}">
+											<f:validateLength minimum="3" />
+											<p:ajax event="blur" update="passwordMsg" />
+										</p:password></td>
+									<td><p:message id="passwordMsg" for="password" display="icon" /></td>
+								</tr>
+								<tr>
+									<td><p:commandButton id="doLogin" value="Login"
+											action="#{WelcomeManagedBean.login}" ajax="false" icon="ui-icon-star"/></td>
+									<td><p:commandButton id="doReset" value="Reset"
+											action="#{WelcomeManagedBean.reset}" ajax="false" icon="ui-icon-star"/></td>
+									<td></td>
+								</tr>
+							</table>
+							<div>
+								<h:messages></h:messages>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</h:form>
+		</p:panel>
+	</center>
+
+</h:body>
+</html>
